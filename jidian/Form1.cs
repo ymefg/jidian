@@ -16,5 +16,18 @@ namespace jidian
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Form2 form2 = new Form2();
+            //form2.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("由于我比较懒，还没做全自动更新的程序，所以烦请手动下载最新版本。");
+            System.Diagnostics.Process.Start("https://blog.ymefg.cn/?p=121");
+        }
     }
 }
