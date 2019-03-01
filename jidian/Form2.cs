@@ -308,8 +308,12 @@ namespace jidian
             try
             {
                 ads = e.Result.Split('\n');
-                //ad = true;
-                //timer1.Enabled = true;
+                for (int i = 0; i < ads.Length; i++)
+                {
+                    if (ads[i] != null) adnum++;
+                }
+                ad = true;
+                timer1.Enabled = true;
             }
             catch
             {
@@ -341,24 +345,11 @@ namespace jidian
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                if (ads[shunxu] != "")
-                {
-                    neirong = ads[shunxu].Split('^');
-                    linkLabel1.Text = neirong[0];
-                    link = neirong[1];
-                    shunxu++;
-                }
-                else
-                {
-                    shunxu = 0;
-                }
-            }
-            catch
-            {
-
-            }
+            if (shunxu >= adnum) shunxu = 0;
+            string[] wenzi = ads[shunxu].Split('^');
+            linkLabel1.Text = wenzi[0];
+            link = wenzi[1];
+            shunxu++;
         }
     }
 }
