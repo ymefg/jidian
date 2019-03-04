@@ -25,10 +25,10 @@ namespace jidian.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int version {
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.0.1")]
+        public string version {
             get {
-                return ((int)(this["version"]));
+                return ((string)(this["version"]));
             }
         }
     }

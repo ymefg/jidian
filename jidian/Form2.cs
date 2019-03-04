@@ -289,7 +289,7 @@ namespace jidian
             try
             {
                 System.Net.WebClient getversion = new System.Net.WebClient();
-                getversion.DownloadStringAsync(new Uri(@"http://ymefg.cn/jidian/version.txt"));
+                getversion.DownloadStringAsync(new Uri(@"https://github.com/ymefg/jidian/releases/latest"));
                 getversion.DownloadStringCompleted += Getversion_DownloadStringCompleted;
 
                 System.Net.WebClient getad = new System.Net.WebClient();
@@ -327,7 +327,10 @@ namespace jidian
             try
             {
                 //throw new NotImplementedException();
-                if (Properties.Settings.Default.version < Convert.ToInt32(e.Result))
+                string result = e.Result.Substring(e.Result.IndexOf("<a href=\"/ymefg/jidian/releases/tag/") + "<a href=\"/ymefg/jidian/releases/tag/".Length);
+                string[] rspv = result.Split('"');
+
+                if (!Properties.Settings.Default.version.Equals(rspv[0]))
                 {
                     button2.Text = "有新版本";
                 }
