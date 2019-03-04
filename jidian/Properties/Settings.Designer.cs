@@ -25,7 +25,7 @@ namespace jidian.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.1.1")]
         public string version {
             get {
                 return ((string)(this["version"]));
