@@ -31,11 +31,3 @@
 * 图表分析
 * 更高效率的代码
 * 兼容全部浏览器
-
-## 捐赠
-
-如果你喜欢这个软件，可以请我喝杯奶茶……
-
-![wechat](https://blog.ymefg.cn/wp-content/uploads/2019/02/c763f32fa0c528095ab84d2cf34c8e9-272x300.png)
-
-![alipay](https://blog.ymefg.cn/wp-content/uploads/2019/03/77b00b49c180fa9bbfa798b2600a532-241x300.png)
